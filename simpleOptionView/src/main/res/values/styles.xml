@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomLabelView">
+        <attr name="labelImageRes" format="reference"/>
+        <attr name="labelContent" format="string"/>
+        <attr name="labelHint" format="string"/>
+        <attr name="labelNavRes" format="reference"/>
+        <attr name="showBottomLine" format="boolean"/>
+        <attr name="showTopLine" format="boolean"/>
+        <attr name="labelContentTextSize" format="dimension"/>
+        <attr name="labelContentTextColor" format="color"/>
+        <attr name="rightContentTextSize" format="dimension"/>
+        <attr name="rightContentTextColor" format="color"/>
+        <attr name="rightContentHintColor" format="color"/>
+        <attr name="rightContentHintText" format="string"/>
+        <attr name="rightContent" format="string"/>
+    </declare-styleable>
+
+    <style name="default_line">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#e6e6e6</item>
+    </style>
+</resources>

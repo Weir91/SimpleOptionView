@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/custom_line_top"
+        style="@style/default_line"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageleft"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:paddingLeft="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:background="#00000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center|right"
+            android:singleLine="true"
+            android:textSize="16sp"/>
+
+        <ImageButton
+            android:id="@+id/imageRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:background="#00000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/custom_line_bottom"
+        style="@style/default_line"
+        android:visibility="gone"/>
+
+</LinearLayout>

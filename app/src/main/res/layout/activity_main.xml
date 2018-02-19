@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <cn.weir.simpleOptionView.SimpleOptionView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:labelContent="不带左图"
+            app:labelContentTextColor="@color/black"
+            app:labelContentTextSize="@dimen/font_small"
+            app:labelNavRes="@drawable/ic_arrow_right"
+            app:rightContentHintText="样式1"
+            app:rightContentTextColor="@color/black"
+            app:rightContentTextSize="@dimen/font_small"/>
+
+        <cn.weir.simpleOptionView.SimpleOptionView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:labelContent="带左图"
+            app:labelContentTextColor="@color/black"
+            app:labelContentTextSize="@dimen/font_small"
+            app:labelImageRes="@drawable/icon_1"
+            app:labelNavRes="@drawable/ic_arrow_right"
+            app:rightContentHintText="样式2"
+            app:rightContentTextColor="@color/black"
+            app:rightContentTextSize="@dimen/font_small"
+            android:layout_marginTop="12dp"/>
+
+        <cn.weir.simpleOptionView.SimpleOptionView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:labelContent="文字太多"
+            app:labelContentTextColor="@color/black"
+            app:labelContentTextSize="@dimen/font_small"
+            app:labelImageRes="@drawable/icon_1"
+            app:labelNavRes="@drawable/ic_arrow_right"
+            app:rightContent="样式文字多样式文字多样式文字多样式文字多样式文字多"
+            app:rightContentTextColor="#666"
+            app:rightContentTextSize="@dimen/font_small"
+            android:layout_marginTop="12dp"/>
+
+        <cn.weir.simpleOptionView.SimpleOptionView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/white"
+            app:labelContent="文字太多不带右图"
+            app:labelContentTextColor="@color/black"
+            app:labelContentTextSize="@dimen/font_small"
+            app:labelImageRes="@drawable/icon_1"
+            app:rightContent="样式文字多样式文字多样式文字多样式文字多样式文字多"
+            app:rightContentTextColor="#666"
+            app:rightContentTextSize="@dimen/font_small"
+            android:layout_marginTop="12dp"/>
+
+        <cn.weir.simpleOptionView.SimpleOptionView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:labelContent="带上下分割线"
+            app:labelContentTextColor="@color/black"
+            app:labelContentTextSize="@dimen/font_small"
+            app:labelImageRes="@drawable/icon_1"
+            app:labelNavRes="@drawable/ic_arrow_right"
+            app:rightContentHintText="样式2"
+            app:rightContentTextColor="#666"
+            app:rightContentTextSize="@dimen/font_small"
+            app:showTopLine="true"
+            app:showBottomLine="true"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>
