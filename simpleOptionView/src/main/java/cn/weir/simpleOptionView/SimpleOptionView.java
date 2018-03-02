@@ -3,6 +3,7 @@ package cn.weir.simpleOptionView;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.support.annotation.ColorInt;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -35,7 +36,7 @@ public class SimpleOptionView extends RelativeLayout {
 
     public SimpleOptionView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        inti(context);
+        init(context);
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CustomLabelView, defStyleAttr, 0);
         for (int i = 0; i < a.getIndexCount(); i++) {
             int attr = a.getIndex(i);
@@ -76,7 +77,7 @@ public class SimpleOptionView extends RelativeLayout {
         a.recycle();
     }
 
-    private void inti(Context context) {
+    private void init(Context context) {
         View v = LayoutInflater.from(context).inflate(R.layout.custom_item_view, this);
         findViews(v);
         defaultData();
@@ -94,9 +95,7 @@ public class SimpleOptionView extends RelativeLayout {
 
     private void defaultData() {
 
-
     }
-
 
     public void setRightImage(int res) {
         if (res != 0) {
@@ -121,13 +120,12 @@ public class SimpleOptionView extends RelativeLayout {
 
     public void setRightHint(String text) {
         if (TextUtils.isEmpty(text)) {
-
+            tvRight.setHint("");
         } else {
-            tvRight.setText(text);
+            tvRight.setHint(text);
             tvRight.setVisibility(VISIBLE);
         }
     }
-
 
     public void setRightText(String text) {
         if (TextUtils.isEmpty(text)) {
@@ -142,10 +140,32 @@ public class SimpleOptionView extends RelativeLayout {
         tvRight.setVisibility(View.GONE);
     }
 
-    public void setRightTextColor(int res) {
+    public void setLeftTextSize(float size) {
+        tvLeft.setTextSize(size);
+    }
+
+    public void setLeftTextColor(@ColorInt int res) {
         if (res != 0) {
             tvLeft.setVisibility(View.VISIBLE);
             tvLeft.setTextColor(res);
+        }
+    }
+
+    public void setLeftHintColor(@ColorInt int res) {
+        if (res != 0) {
+            tvLeft.setVisibility(View.VISIBLE);
+            tvLeft.setHintTextColor(res);
+        }
+    }
+
+    public void setRightTextSize(float size) {
+        tvRight.setTextSize(size);
+    }
+
+    public void setRightTextColor(int res) {
+        if (res != 0) {
+            tvRight.setVisibility(View.VISIBLE);
+            tvRight.setTextColor(res);
         }
     }
 
@@ -155,13 +175,14 @@ public class SimpleOptionView extends RelativeLayout {
         }
     }
 
-
+    @Deprecated
     public void setRightInputType(int type) {
         if (type != 0) {
-            tvRight.setVisibility(View.GONE);
+
         }
     }
 
+    @Deprecated
     public void setRightInputWatcher(TextWatcher textWatcher) {
 
     }
@@ -172,15 +193,16 @@ public class SimpleOptionView extends RelativeLayout {
 
     public void setLeftHint(String text) {
         if (TextUtils.isEmpty(text)) {
-
+            tvLeft.setHint("");
         } else {
+            tvLeft.setHint(text);
             tvLeft.setVisibility(View.GONE);
         }
     }
 
     public void setLeftText(String text) {
         if (TextUtils.isEmpty(text)) {
-
+            tvLeft.setText("");
         } else {
             tvLeft.setVisibility(View.VISIBLE);
             tvLeft.setText(text);
@@ -191,22 +213,10 @@ public class SimpleOptionView extends RelativeLayout {
         tvLeft.setVisibility(View.GONE);
     }
 
-    public void setLeftTextColor(int res) {
-        if (res != 0) {
-            tvLeft.setVisibility(View.VISIBLE);
-            tvLeft.setTextColor(res);
-        }
-    }
-
-    public void setLeftHintColor(int res) {
-        if (res != 0) {
-            tvLeft.setVisibility(View.GONE);
-        }
-    }
-
+    @Deprecated
     public void setLeftInputType(int type) {
         if (type != 0) {
-            tvRight.setVisibility(View.GONE);
+
         }
     }
 
@@ -230,6 +240,14 @@ public class SimpleOptionView extends RelativeLayout {
         customItem.setEnabled(true);
         customItem.setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS); //父View优先获得焦点
         customItem.setOnClickListener(itemClick);
+    }
+
+    public void showLineTop(boolean isShow) {
+        if (isShow) {
+            lineTop.setVisibility(View.VISIBLE);
+        } else {
+            lineTop.setVisibility(View.GONE);
+        }
     }
 
     public void showLineBottom(boolean isShow) {
