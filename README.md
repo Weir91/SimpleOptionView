@@ -4,15 +4,16 @@
 Gradle
 ------
 ```
-   allprojects {
+    allprojects {
         repositories {
             jcenter()
             maven { url "https://jitpack.io" }
         }
-   }
-   dependencies {
-        compile 'com.github.Weir91:SimpleOptionView:-SNAPSHOT'
-   }
+    }
+    dependencies {
+	    compile 'com.github.Weir91:SimpleOptionView:master-SNAPSHOT'
+	}
+
 ```
 
 简单的操作控件
